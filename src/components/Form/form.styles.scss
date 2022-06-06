@@ -1,0 +1,27 @@
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  background-color: #fff;
+
+  &__label {
+    padding-right: 1rem;
+  }
+  &__input {
+    border: 1px solid #eee;
+    border-radius: 1rem;
+    margin-right: 2.5rem;
+    width: 18rem;
+    &--ammount {
+      width: 12rem;
+    }
+  }
+  &__button {
+    background-color: orangered;
+    font-weight: bold;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+  }
+}
