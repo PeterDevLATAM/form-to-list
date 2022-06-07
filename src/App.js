@@ -13,7 +13,7 @@ function App() {
     console.log("INIT")
     console.dir(data)
     dispatch(setTransactions(data));
-  },[]);
+  },[dispatch]);
 
   return (
     <div className="App">

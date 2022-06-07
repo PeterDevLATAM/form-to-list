@@ -1,15 +1,24 @@
 import "./list.styles.scss";
 
 import ListItem from "../List-item/list-item.component";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { selectTransactionsReducer } from "../../store/transactions/transactions.selector";
+import {toggleOpen} from "../../store/transactions/transactions.actions"
 
 function List() {
-  const data = useSelector(selectTransactionsReducer)
+  console.log("rendered")
+  const dispatch= useDispatch()
+  let data = useSelector(selectTransactionsReducer)
+
+  const clickHandler=(id)=>{
+    console.log("click", id)
+    dispatch(toggleOpen(id, data))
+  }
+
   return (
     <ul className="list">
       {data.map((transaction) => {
-        return <ListItem key={transaction.id} transaction={transaction} />;
+        return <ListItem key={transaction.id} transaction={transaction} clickHandler={clickHandler} />;
       })}
     </ul>
   );
