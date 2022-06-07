@@ -2,8 +2,6 @@ import "./list-item.styles.scss";
 
 export default function ListItem({ transaction }) {
   const { name, ammount, date, status, open } = transaction;
-  console.log(open);
-  
   return (
     <li className={open ? "list-item" : "list-item list-item--closed"}>
       <p className="list-item__name">{name}</p>
