@@ -11,7 +11,6 @@ function List() {
   let data = useSelector(selectTransactionsReducer)
 
   const clickHandler=(id)=>{
-    console.log("click", id)
     dispatch(toggleOpen(id, data))
   }
 

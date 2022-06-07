@@ -3,7 +3,6 @@ import "./list-item.styles.scss";
 
 export default function ListItem({ transaction, clickHandler }) {
   const { name, ammount, date, status, open, id } = transaction;
-  console.log("abierto",id,open)
 
  
   return (
